@@ -1,11 +1,11 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const userSchema = new mongoose.Schema(
   {
-    firstName: String,
-    lastName: String,
+    firstName: {type: String, required: true},
+    lastName: {type: String, required: true},
     email: { type: String, required: true, lowercase: true, unique: true },
-    password: String,
+    password: {type: String, required: true},
     spotifyToken: String,
     spotifyRefresh: String,
     tokenExpiration: Number,

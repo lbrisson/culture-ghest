@@ -1,15 +1,14 @@
 import express from 'express'
-import { json, urlencoded } from 'body-parser'
 import morgan from 'morgan'
 import cors from 'cors'
 import mongoose from 'mongoose'
-import userRouter from './routes/user-router'
+import userRouter from './routes/user-router.js'
 
 export const app = express();
 
 app.use(cors())
-app.use(json());
-app.use(urlencoded({ extended: true }));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(morgan("dev"));
 
 app.use('/api/user', userRouter)
