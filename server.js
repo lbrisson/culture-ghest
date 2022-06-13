@@ -1,13 +1,17 @@
-const express = require('express');
-const mongoose = require("mongoose");
-const morgan = require('morgan');
-const {urlencoded, json} = require('body-parser');
+import express from 'express'
+import morgan from 'morgan'
+import cors from 'cors'
+import mongoose from 'mongoose'
+import userRouter from './routes/user-router.js'
 
-const app = express();
+export const app = express();
 
-app.use(json());
-app.use(urlencoded({ extended: true }));
+app.use(cors())
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(morgan("dev"));
+
+app.use('/api/user', userRouter)
 
 const connect = (url) =>
   mongoose.connect(
