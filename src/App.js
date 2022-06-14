@@ -1,16 +1,17 @@
 
 import './App.css';
-import Button from '@mui/material/Button';
-import Footer from './components/footer/Footer';
-import HeroBanner from './components/heroBanner/HeroBanner';
-import SearchNavBar from './components/SearchNavBar.jsx/SearchNavBar';
-import MediaControlCard from './components/mediaCards/MediaControlCard';
-import DescriptionAlerts from './components/alerts/DescriptionAlerts';
+import Footer from './components/footer/Footer.jsx';
+import HeroBanner from './components/heroBanner/HeroBanner.jsx';
+import SearchNavBar from './components/SearchNavBar.jsx/SearchNavBar.jsx';
+import MediaControlCard from './components/mediaCards/MediaControlCard.jsx';
+import DescriptionAlerts from './components/alerts/DescriptionAlerts.jsx';
+import LandingPage from './components/LandingPage.jsx';
 
 function App() {
   return (
     <div className="App">
-        <SearchNavBar />
+      <LandingPage />
+        {/* <SearchNavBar /> */}
         {/* <HeroBanner /> */}
         {/* <MediaControlCard /> */}
       {/* <DescriptionAlerts /> */}
