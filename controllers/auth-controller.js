@@ -26,7 +26,6 @@ export const signup = async (req, res) => {
     const token = newToken(user);
     return res.status(201).send({ token });
   } catch (err) {
-    console.error(err);
     return res.status(500).end();
   }
 };
@@ -55,7 +54,6 @@ export const login = async (req, res) => {
     const token = newToken(user);
     return res.status(201).send({ token });
   } catch (err) {
-    console.error(err);
     res.status(500).end();
   }
 };
@@ -72,7 +70,6 @@ export const protect = async (req, res, next) => {
   try {
     payload = await verifyToken(token);
   } catch (e) {
-    console.error(e);
     return res.status(401).end();
   }
 
