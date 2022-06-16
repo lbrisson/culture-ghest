@@ -1,5 +1,5 @@
-import { config } from "../config/auth";
-import { User } from "../models/user-schema";
+import  { config }  from "../config/auth.js";
+import { User } from "../models/user-schema.js";
 import jwt from "jsonwebtoken";
 
 export const newToken = (user) => {
