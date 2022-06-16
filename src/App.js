@@ -6,21 +6,17 @@ import SearchNavBar from './components/SearchNavBar.jsx/SearchNavBar.jsx';
 import MediaControlCard from './components/mediaCards/MediaControlCard.jsx';
 import DescriptionAlerts from './components/alerts/DescriptionAlerts.jsx';
 import LandingPage from './components/LandingPage.jsx';
+import "bootstrap/dist/css/bootstrap.min.css";
 import React from 'react';
+import SpotifyLogin from "./components/SpotifyLogin.js";
+import Home from "./components/Home.jsx";
 
+
+const code = new URLSearchParams(window.location.search).get('code');
+console.log(code);
 function App() {
-  // const [data, setData] = React.useState(null);
+     return code ? <Home code={code} /> : <SpotifyLogin />
 
-  return (
-    <div className="App">
-      <LandingPage />
-        {/* <SearchNavBar /> */}
-        {/* <HeroBanner /> */}
-        {/* <MediaControlCard /> */}
-      {/* <DescriptionAlerts /> */}
-      {/* <Footer /> */}
-    </div>
-  );
 }
 
 export default App;

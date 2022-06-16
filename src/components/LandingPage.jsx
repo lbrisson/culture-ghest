@@ -1,5 +1,5 @@
 import Navigator from "./Navigator.jsx";
-import Paperbase from  "./paperbase/Paperbase.jsx"
+// import Paperbase from  "./paperbase/Paperbase.jsx";
 
 
 export default function LandingPage() {
@@ -16,7 +16,7 @@ export default function LandingPage() {
     return (
         <div>
         <Navigator />
-        <Login />
+        {/* <Login /> */}
         {/* <Paperbase /> */}
         </div>
     );
