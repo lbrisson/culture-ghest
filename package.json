@@ -31,7 +31,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "dev": "NODE_OPTIONS='--experimental-specifier-resolution=node' nodemon server.js"
+    "dev": "NODE_OPTIONS='--experimental-specifier-resolution=node' nodemon server.js",
+    "format": "prettier --write \"src/**/*.{js,jsx}\""
   },
   "eslintConfig": {
     "extends": [
@@ -52,6 +53,7 @@
     ]
   },
   "devDependencies": {
-    "nodemon": "^2.0.16"
+    "nodemon": "^2.0.16",
+    "prettier": "^2.7.0"
   }
 }

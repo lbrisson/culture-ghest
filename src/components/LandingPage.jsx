@@ -16,7 +16,8 @@ export default function LandingPage() {
     return (
         <div>
         <Navigator />
-        <Paperbase />
+        <Login />
+        {/* <Paperbase /> */}
         </div>
     );
 }
